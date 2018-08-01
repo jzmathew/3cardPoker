@@ -1,0 +1,47 @@
+Compilation
+----------------------
+make
+---should create executable called pokerexe---
+./run_tests ./pokerexe
+---should run all tests in test folder---
+
+
+Files included
+----------------------
+
+Makefile for compilation. Commands:
+1) make == compile files to exec
+2) make clean == remove all exec files
+
+Test folder
+Included test cases for specific edge cases ranging from test# 00 to 15
+Testkey file gives description of each test and results
+
+Data.h
+
+contains structs for poker game
+default constructor and custom comp
+optimized for mem mgmt
+
+Poker.cpp
+
+c++ file with driver for game
+Overview of code
+1) create necessary data structures based on initial size input
+2) Read in card values and create instances of hands and cards
+3) Check input formatting
+4) Run driver:
+5) Check each win conditions from highest to lowest (ie: straight flush to high card)
+6) If possible winning hand is found, it continues and check the rest of the hands for that win condition as well
+7) Settles any ties with high card checks
+8) prints out winners then returns
+
+Known limitations + Bugs
+----------------------
+1) Does not check for repeated cards. Ie, 2c and 2c in the same game
+	Decided not to due to time limitations and Time vs memory
+	I would either need a map for each card, or a for loop to check every possible card for repeats
+2) Does not check for max players or 2 decks
+	Under the game constraints it should only work with 17 players for 1 deck. If more than 1 deck, then more players.
+3) Thought about writing a testing script to generate random hands but specific tests seemed more effective
+	Additionally verifying output would take longer than necessary

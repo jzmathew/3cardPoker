@@ -1,0 +1,18 @@
+00	spec test
+01	Straight
+02	straight with ace
+03	flush
+04	straight flush
+05	ace straight flush
+06	3 of a kind
+07	pair win
+08	higher pair win
+09	high card win
+10	straight tie
+11	flush tie
+12	three of a kind tie
+13	higher straight
+14	higher three of a kind
+15	high card test
+
+In every case, winning hand should be player index 2 or include 2. except for test 15, answer should be 0. 
